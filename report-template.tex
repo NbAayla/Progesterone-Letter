@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% kaobook
+% LaTeX Template
+% Version 1.3 (18/2/20)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% For the latest template development version and to make contributions:
+% https://github.com/fmarotta/kaobook
+%
+% Authors:
+% Federico Marotta (federicomarotta@mail.com)
+% Giuseppe Silano (g.silano89@gmail.com)
+% Based on the doctoral thesis of Ken Arroyo Ohori (https://3d.bk.tudelft.nl/ken/en)
+% and on the Tufte-LaTeX class.
+% Modified for LaTeX Templates by Vel (vel@latextemplates.com)
+%
+% License:
+% CC0 1.0 Universal (see included MANIFEST.md file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	%fontsize=10pt, % Base font size
+	%twoside=false, % If true, use different layouts for even and odd pages (in particular, if twoside=true, the margin column will be always on the outside)
+	secnumdepth=3, % How deep to number headings. Defaults to 2 (subsections)
+	%abstract=true, % Uncomment to print the title of the abstract
+	%numbers=noenddot, % Comment to output dots after section numbers; the most common values for this option are: enddot, noenddot and auto (see the KOMAScript documentation for an in-depth explanation)
+	%draft=true, % If uncommented, rulers will be added in the header and footer
+	%overfullrule=true, % If uncommented, overly long lines will be marked by a black box; useful for correcting spacing problems
+]{kaohandt}
+
+% Choose the language
+\usepackage[english]{babel} % Load characters and hyphenation
+\usepackage[english=british]{csquotes}	% English quotes
+
+% Load packages for testing
+\usepackage{blindtext}
+%\usepackage{showframe} % Uncomment to show boxes around the text area, margin, header and footer
+%\usepackage{showlabels} % Uncomment to output the content of \label commands to the document where they are used
+
+%\graphicspath{{images/}{./}} % Paths where images are looked for
+
+% Load mathematical packages for theorems and related environments. NOTE: choose only one between 'mdftheorems' and 'plaintheorems'.
+% \usepackage{styles/mdftheorems}
+\usepackage{styles/plaintheorems}
+
+% Load the bibliography package
+\usepackage{styles/kaobiblio}
+\addbibresource{report-template.bib} % Bibliography file
+
+% Load the package for hyperreferences
+\usepackage{styles/kaorefs}
+
+% Make LaTeX produce the files required to compile the glossary
+%\makeglossaries
+
+% Make LaTeX produce the files required to compile the nomenclature
+%\makenomenclature 
+
+\newcommand\tsub[1]{\textsubscript{#1}}
+\newcommand\tsup[1]{\textsuperscript{#1}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	BOOK INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title[Template for a Kao Report (or Handout)]{Template for a Kao\\ Report (or Handout)}
+
+\author[MF, JMC]{Michael Faraday\thanks{Royal Society of London} \and John McClane \thanks{New York City Police Department}}
+
+\date{\today}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND ABSTRACT
+%----------------------------------------------------------------------------------------
+
+% \maketitle
+
+% \margintoc
+
+\begin{abstract}
+\noindent [Doctor Name],\\\\
+I am sending you this letter to ask for a prescription for bioidentical progesterone to aid my transition from male to female. Progesterone is a critical hormone for my affirmed sex. Without it, my ability to transition completely is compromised and I am at a heightened risk for severe health problems such as low bone mineral density, cardiovascular diseases, and breast cancer.
+\end{abstract}
+
+% {\noindent\textbf{Keywords:} \LaTeX, Kao, handout, article, report}
+
+\medskip
+
+%----------------------------------------------------------------------------------------
+%	MAIN BODY
+%----------------------------------------------------------------------------------------
+
+\section{What Is Progesterone?}
+
+In cisgendered women\sidenote{Meaning their gender identity as a woman aligns with their female sex assigned at birth}, progesterone (P\tsub{4}) is a sex hormone important for pregnancy, embryogenisis, and the regulation of ovulation and menstruation. However, P\tsub{4} also has important roles outside of the pelvic and sex organs. P\tsub{4} is critical for:
+
+\subsection{Breasts}
+
+\subsubsection{Lobuloalveolar Development}
+When combined with the protein Prolactin, P\tsub{4} mediates lobuloalveolar maturation of the mammary glands, allowing for milk production, lactation, and breastfeeding\sidecite{macias_hinck_2012}.
+
+\subsubsection{Ductal Development}
+P\tsub{4} is necessary for the development of ductal branching within the breast and general maturation, including the enlargement of the areola\sidecite{robinson_2000}. Without it, as frequently seen in transgender women, breasts remain in Tanner stage 3 indefinitely\sidecite{fisher_castellini_2017}. This lack of breast maturation is why the majority of current transgender women seek breast augmentation surgery\sidecite{wierckx_mueller_weyers_caenegem_roef_heylens_tsjoen_2012}.
+
+\subsubsection{Reduced Breast Cancer Risk}
+Studies indicate that hormone replacement therapy with estrogen alone (what I am currently prescribed) results in a significant (1.29-fold) increase in the risk for invasive breast cancer. This risk elevation was eliminated with the inclusion of bioidentical progesterone.\\
+
+\noindent While synthetic progestins\sidenote{Such as medroxyprogesterone acetate} have been found to increase the risk of breast cancer. In a study\sidecite{fournier_berrino_clavel-chapelon_2007} of postmenopausal women (n=80,377) from 1990 to 2002, compared to never using hormone replacement therapy:
+\begin{itemize}
+    \item HRT with estrogen alone lead to a 1.29-fold increased risk of invasive breast cancer.
+    \item HRT with estrogen combined with synthetic estrogens led to a 1.69-fold increased risk of invasive breast cancer.
+    \item HRT with estrogen combined with bioidentical progesterone lead to a relative risk of 1.00, meaning no change in risk from the control group that didn't use HRT.
+\end{itemize}
+
+\section{Skin Health}
+Estrogen and P\tsub{4} receptors have been detected in the skin. During and after menopause, decreased levels of female sex hormones result in atrophy, thinning of the skin as well as a reduction is elasticity, firmness, and strength\sidecite{Holzer2005EffectsAS}.
+
+% \begin{itemize}
+%     \item Skin health.
+%     \item Sexual function.
+%     \item Nervous system functions.
+%     \item Brain development.
+%     \item Bone strength and mineral density.
+%     \item Regulating gall-bladder activity.
+%     \item Gum health.
+%     \item Signalling insulin release (and other pancreatic functions).
+%     \item Preventing endometrial cancer.
+%     \item etc.
+% \end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+% The bibliography needs to be compiled with biber using your LaTeX editor, or on the command line with 'biber main' from the template directory
+
+\printbibliography[title=Bibliography] % Set the title of the bibliography and print the references
+
+%----------------------------------------------------------------------------------------
+%	NOMENCLATURE
+%----------------------------------------------------------------------------------------
+% 
+% % The nomenclature needs to be compiled on the command line with 'makeindex main.nlo -s nomencl.ist -o main.nls' from the template directory
+% 
+% \nomenclature{$c$}{Speed of light in a vacuum inertial frame}
+% \nomenclature{$h$}{Planck constant}
+% 
+% \renewcommand{\nomname}{Notation} % Rename the default 'Nomenclature'
+% \renewcommand{\nompreamble}{The next list describes several symbols that will be later used within the body of the document.} % Prepend this text to the nomenclature
+% 
+% \printnomenclature % Output the nomenclature
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+% 
+% % The glossary needs to be compiled on the command line with 'makeglossaries main' from the template directory
+% 
+% \newglossaryentry{computer}{
+% 	name=computer,
+% 	description={is a programmable machine that receives input, stores and manipulates data, and provides output in a useful format}
+% }
+% 
+% % Glossary entries (used in text with e.g. \acrfull{fpsLabel} or \acrshort{fpsLabel})
+% \newacronym[longplural={Frames per Second}]{fpsLabel}{FPS}{Frame per Second}
+% \newacronym[longplural={Tables of Contents}]{tocLabel}{TOC}{Table of Contents}
+% 
+% \setglossarystyle{listgroup} % Set the style of the glossary (see https://en.wikibooks.org/wiki/LaTeX/Glossary for a reference)
+% \printglossary[title=Special Terms, toctitle=List of Terms] % Output the glossary, 'title' is the chapter heading for the glossary, toctitle is the table of contents heading
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
